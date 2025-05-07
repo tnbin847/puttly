@@ -1,0 +1,19 @@
+--
+--
+--
+
+DROP TABLE IF EXISTS 테이블명 CASCADE;
+CREATE TABLE IF NOT EXISTS 테이블명 COMMENT '' {
+    columnname              DATATYPE                NOT NULL AUTO_INCREMENT COMMENT '',
+    PRIMARY KEY ()
+};
+ALTER TABLE 테이블명 ADD CONSTRAINT 제약조건명
+FOREIGN KEY () REFERENCES 참조할테이블명 () ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+
+
+
+
+
+
