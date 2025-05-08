@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout/public}">
+<head>
+    <title>로그인</title>
+    <link rel="stylesheet" href="/css/pages/index.css">
+</head>
+<th:block layout:fragment="content">
+    <div class="contents">
+        <div class="panel-container">
+            <div class="panel">
+                <header class="panel-header">
+                    <h1 class="panel-heading-title is-text-logo">Puttly</h1>
+                </header>
+                <div class="panel-body">
+                    <form role="form" id="signInForm" class="form">
+                        <div class="field-container">
+                            <div class="field mb-1">
+                                <input type="text" name="email" id="loginEmail" class="input" placeholder="이메일" autocomplete="off" autofocus>
+                            </div>
+                            <div class="field">
+                                <input type="password" name="password" id="loginPwd" class="input" placeholder="비밀번호" autocomplete="off"/>
+                            </div>
+                            <div class="field has-text-right">
+                                <a href="#" role="link" class="is-link-accent">혹시 비밀번호를 잊으셨나요?</a>
+                            </div>
+                        </div>
+                        <div class="field-container">
+                            <div class="field">
+                                <button id="signInBtn" class="button is-primary">로그인</button>
+                            </div>
+                            <div class="separator"><hr><p>또는</p><hr></div>
+                            <div class="field">
+                                <button id="kakaoBtn" class="button is-kakao">
+                                    <img src="/images/icons/social/icon-kakao.svg" alt="카카오">
+                                    카카오 계정으로 시작하기
+                                </button>
+                            </div>
+                            <div class="field">
+                                <button id="googleBtn" class="button is-google">
+                                    <img src="/images/icons/social/icon-google.svg" alt="구글">
+                                    구글 계정으로 시작하기
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-body has-text-center">
+                    계정이 없으신가요? <a href="/sign-up" role="link" class="is-link-accent">회원가입</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</th:block>
+<th:block layout:fragments="pageScript">
+    <script src="/js/pages/index.js"></script>
+</th:block>
+</html>

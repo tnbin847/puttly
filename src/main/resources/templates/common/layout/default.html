@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">Puttly</title>
+    <th:block th:replace="~{common/layout/fragments/head_lib :: headLib}"/>
+</head>
+<body>
+    <div id="webpage">
+        <th:block th:replace="~{common/layout/fragments/header :: header}"/>
+        <!-- 본문 (좌측 사이드 메뉴 + 메인 컨텐츠) -->
+        <div id="container" class="">
+            <th:block th:replace="~{common/layout/fragments/side_bar :: sideBar}"/>
+            <th:block layout:fragment="content"></th:block>
+        </div>
+        <!-- 공통 푸터 -->
+        <th:block th:replace="~{common/layout/fragments/footer :: footer}"/>
+    </div>
+    <!-- 공통 자바스크립트 -->
+    <th:block th:replace="~{common/layout/fragments/scripts :: scripts}"/>
+    <!-- 페이지별 자바스크립트 -->
+    <th:block layout:fragment="pageScript"></th:block>
+</body>
+</html>
