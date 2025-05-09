@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+/* ============================================================
+    [1] 텍스트 관련 사용자 정의 CSS 속성
+============================================================ */
+:root {
+    /** 텍스트 색상 */
+    --text-primary: var(--primary);
+    --text-accent: var(--accent);
+    --text-helper: var(--gray-60);
+    --text-color: var(--black);
+
+    --text-title: var(--dark);
+    --text-subtitle: var(--gray-60);
+    
+    --text-on-color: var(--white);
+
+    --text-success: var(--success);
+    --text-warning: var(--warning);
+    --text-danger: var(--danger);
+    
+
+    /** 폰트 스타일 */
+    --font-body: var(--font-regular);
+    --font-ui: var(--font-medium);
+
+    --font-weight: 600;
+}
+
+
+
+/* ============================================================
+    [2] 텍스트
+============================================================ */
+/** 공통 */
+html, body, form {
+    --webit-font-smoothing: antialiased;
+    --moz-osx-font-smoothing: grayscale;
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: var(--font-weight);
+    color: var(--text-color);
+}
+
+/** 정렬 */
+.has-text-left {
+    text-align: left;
+}
+
+.has-text-right {
+    text-align: right;
+}
+
+.has-text-center {
+    text-align: center;
+}
+
+/** 색상 */
+.is-text-primary {
+    color: var(--text-primary);
+}
+
+.is-text-accent, .has-text-accent {
+    color: var(--text-accent);
+}
+
+.is-text-helper {
+    color: var(--text-helper);
+}
+
+/** 링크 텍스트 */
+a[role='link']:hover {
+    text-decoration: underline;
+}
+
+
+
+/* ============================================================
+    [3] 이미지 
+============================================================ */
+/** 공통 */
+.has-img, .img {
+    display: block;
+    position: relative;
+}
+
+.has-img {
+    width: fit-content;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+}
+
+/** 이미지 크기별 정의 */
+.has-img.is-x-small {
+    max-width: var(--img-xs);
+}
+
+.has-img.is-small {
+    max-width: var(--img-sm);
+}
+
+.has-img.is-medium {
+    max-width: var(--img-md);
+}
+
+.has-img.is-large {
+    max-width: var(--img-lg);
+}
+
+.has-img.is-x-large {
+    max-width: var(--img-xl);
+}
