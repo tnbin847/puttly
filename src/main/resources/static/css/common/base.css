@@ -6,43 +6,43 @@
 @font-face {
     font-family: 'Pretendard-Light';
     font-display: swap;
-    src: url('/fonts/pretendard/Pretendard-Light.woff'),
-         url('/fonts/pretendard/Pretendard-Light.woff2');
+    src: url('/fonts/Pretendard-Light.woff'),
+         url('/fonts/Pretendard-Light.woff2');
 }
 
 @font-face {
     font-family: 'Pretendard-Regular';
     font-display: swap;
-    src: url('/fonts/pretendard/Pretendard-Regular.woff'),
-         url('/fonts/pretendard/Pretendard-Regular.woff2');
+    src: url('/fonts/Pretendard-Regular.woff'),
+         url('/fonts/Pretendard-Regular.woff2');
 }
 
 @font-face {
     font-family: 'Pretendard-Medium';
     font-display: swap;
-    src: url('/fonts/pretendard/Pretendard-Medium.woff'),
-         url('/fonts/pretendard/Pretendard-Medium.woff2');
+    src: url('/fonts/Pretendard-Medium.woff'),
+         url('/fonts/Pretendard-Medium.woff2');
 }
 
 @font-face {
     font-family: 'Pretendard-ExtraBold';
     font-display: swap;
-    src: url('/fonts/pretendard/Pretendard-ExtraBold.woff'),
-         url('/fonts/pretendard/Pretendard-ExtraBold.woff2');
+    src: url('/fonts/Pretendard-ExtraBold.woff'),
+         url('/fonts/Pretendard-ExtraBold.woff2');
 }
 
 @font-face {
     font-family: 'Montserrat-ExtraBold';
     font-display: swap;
-    src: url('/fonts/montserrat/Montserrat-ExtraBold.woff'),
-         url('/fonts/montserrat/Montserrat-ExtraBold.woff2');
+    src: url('/fonts/Montserrat-ExtraBold.woff'),
+         url('/fonts/Montserrat-ExtraBold.woff2');
 }
 
 @font-face {
     font-family: 'FugazOne-Regular';
     font-display: swap;
-    src: url('/fonts/pretendard/FugazOne-Regular.woff'),
-         url('/fonts/pretendard/FugazOne-Regular.woff2');
+    src: url('/fonts/FugazOne-Regular.woff'),
+         url('/fonts/FugazOne-Regular.woff2');
 }
 
 
@@ -109,7 +109,7 @@
 
     /** 아이콘 */
     --icon-base: 12px;
-    --icon-scale: 4;
+    --icon-scale: 4px;
 
     --icon-md: calc(var(--text-sm) + var(--icon-scale));
     --icon-lg: calc(var(--text-md) + var(--icon-scale));

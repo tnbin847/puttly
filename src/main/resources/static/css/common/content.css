@@ -60,7 +60,8 @@ html, body, form {
     color: var(--text-primary);
 }
 
-.is-text-accent, .has-text-accent {
+.is-text-accent, .has-text-accen, 
+.is-link-accent, .has-link-accent {
     color: var(--text-accent);
 }
 
@@ -71,6 +72,14 @@ html, body, form {
 /** 링크 텍스트 */
 a[role='link']:hover {
     text-decoration: underline;
+}
+
+
+/** 로고 */
+.is-text-logo {
+    font-family: 'FugazOne-Regular', sans-serif;
+    font-size: var(--text-lg);
+    color: var(--text-primary);
 }
 
 

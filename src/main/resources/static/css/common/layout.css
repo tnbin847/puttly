@@ -1,4 +1,54 @@
 @charset "utf-8";
 
+/* ============================================================
+    [1] 공통
+============================================================ */
+/** 전체 영역 */
+#webpage {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 
 
+/** 본문 영역 */
+#container {
+    display: flex;
+    flex: 1;
+}
+
+
+/** 푸터 영역 */
+#footer, #footer .copy, #footer > nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+} 
+
+#footer {
+    justify-content: space-between;
+    width: 100%;
+    padding: var(--space-xs) var(--space-lg);
+    background-color: var(--gray-20);
+    font-family: var(--font-regular);
+    font-size: var(--text-sm);
+    color: var(--gray-60);
+}
+
+#footer > .copy {
+    justify-content: center;
+}
+
+#footer > nav {
+    justify-content: space-between;
+}
+
+#footer > nav > a:not(:last-child) {
+    margin-right: var(--space-md);
+}
+
+#footer > nav > a > i {
+    color: var(--gray-60);
+}
