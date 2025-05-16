@@ -1,0 +1,287 @@
+@charset "UTF-8";
+
+/* ######################################################################
+    # 아이콘
+###################################################################### */
+.icon {
+    font-size: var(--icon-lg);
+}
+
+
+/* ######################################################################
+    # 패널
+###################################################################### */
+.panel-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl) var(--space-none);
+    width: 100%;
+}
+
+.panel-container.is-grouped {
+    flex-direction: row;
+    gap: var(--space-none) var(--space-xl);
+}
+
+.panel, .panel-header, .panel-body {
+    position: relative;
+    width: 100%;
+}
+
+/* 패널 전체 */
+.panel {
+    padding: var(--space-xxl) var(--space-lg);
+    border: var(--border-width-normal) solid var(--component-border);
+    border-radius: var(--rounded-component);
+    background-color: var(--component-background);
+}
+
+.panel-header {
+    margin-bottom: var(--space-lg);
+}
+
+.panel-header .panel-heading-title {
+    font-size: var(--text-lg);
+    color: var(--color-text-heading);
+}
+
+.panel-heading-title.is-primary {
+    font-family: var(--font-heading-primary);
+}
+
+.panel-heading-title.is-secondary {
+    font-family: var(--font-heading-secondary);
+}
+
+.panel-header .panel-heading-subtitle {
+    margin-top: var(--space-sm);
+    color: var(--color-text-subtitle);
+}
+
+
+/* ######################################################################
+    # 탭
+###################################################################### */
+/* 미작성... */
+
+
+
+/* ######################################################################
+    # 버튼
+###################################################################### */
+/* 기본 버튼 */
+.button {
+    display: inline-block;
+    width: 100%;
+    height: var(--component-field-height);
+    padding: var(--space-sm);
+    border: var(--border-width-normal) solid var(--component-border);
+    border-radius: var(--rounded-field);
+    background-color: var(--component-background);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-base);
+    color: inherit;
+}
+
+/* 색상별 버튼 스타일 */
+.button.is-primary {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--white);
+}
+
+/* 소셜 연동 버튼 스타일 */
+.button.is-kakao {
+    border-color: var(--color-btn-kakao);
+    background-color: var(--color-btn-kakao);
+    color: var(--color-btn-kakao-text);
+}
+
+.button.is-google {
+    border-color: var(--gray-4);
+    background-color: var(--white);
+    color: var(--color-btn-google-text);
+}
+
+/* 소셜 연동 버튼 내부 심볼 이미지 */
+.icon-social-symbol {
+    display: block;
+    position: absolute;
+    top: var(--space-sm);
+    width: var(--icon-md);
+}
+
+
+/* ######################################################################
+    # 폼 - 요소
+###################################################################### */
+/* 공통 */
+.label, .input, .textarea, .select, .radio, .checkbox {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* 라벨 */
+.label {
+    margin-bottom: var(--space-xxs);
+    font-family: var(--font-secondary);
+    font-size: var(--text-base-size);
+    font-weight: var(--font-weight-base);
+    color: var(--color-text-heading);
+}
+
+/* 입력 필드 */
+.input {
+    width: 100%;
+    height: var(--component-field-height);
+    padding: var(--space-sm);
+    border: var(--border-width-normal) solid var(--form-element-border);
+    border-radius: var(--rounded-field);
+    background-color: var(--form-element-background);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-base);
+    color: var(--color-text);
+}
+
+.input:focus {
+    border-color: var(--form-element-border-focus);
+}
+
+/* 입력 도움글 */
+.help {
+    display: block;
+    margin-top: var(--space-xxs);
+    font-size: var(--text-sm);
+    color: var(--color-helper);
+}
+
+
+/* ######################################################################
+    # 폼 - 유효성
+###################################################################### */
+.has-feedback > .input {
+    padding-right: var(--space-xxl);
+}
+
+.has-feedback.is-success > .input {
+    border-color: var(--color-success);
+}
+
+.has-feedback.is-error > .input {
+    border-color: var(--color-danger);
+}
+
+/* 유효성 아이콘 & 유효성 메시지 */
+.feedback-icon {
+    display: block;
+    position: absolute;
+    top: calc(var(--space-sm) + 2px);
+    right: calc(var(--space-sm) + 2px);
+    font-size: var(--icon-sm);
+}
+
+.feedback-message {
+    display: block;
+    position: relative;
+    margin-top: var(--space-xxs);
+    font-size: var(--text-sm);
+}
+
+.has-feedback.is-success > .feedback-icon, 
+.has-feedback.is-success > .feedback-message {
+    color: var(--color-success);
+}
+
+.has-feedback.is-error > .feedback-icon, 
+.has-feedback.is-error > .feedback-message {
+    color: var(--color-danger);
+}
+
+
+/* ######################################################################
+    # 폼 - 레이아웃
+###################################################################### */
+/* 폼 요소 제어 래퍼 */
+.control {
+    display: flex;
+    position: relative;
+}
+
+/* 폼 요소 조합 그룹 */
+.has-addons {
+    display: flex;
+    width: 100%;
+    margin: var(--space-none) auto;
+}
+
+.has-addons > *:first-child {
+    flex: 1;
+    margin-right: var(--space-xxs);
+}
+
+.has-addons > *:last-child {
+    width: auto;
+}
+
+/* 폼 필드 레이아웃 */
+.field {
+    width: 100%;
+    margin-bottom: var(--space-unit);
+}
+
+.field:last-child {
+    margin-bottom: var(--space-none);
+}
+
+/* 폼 필드 컨테이너 */
+.field-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: var(--space-lg) var(--space-none);
+}
+
+.field-container:first-child {
+    margin-top: var(--space-none);
+}
+
+.field-container:last-child {
+    margin-bottom: var(--space-none);
+}
+
+.form {
+    line-height: var(--form-line-height);
+}
+
+
+/* ######################################################################
+    # 기타
+###################################################################### */
+/* 분할선 */
+.or-divider {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    color: var(--gray-5);
+}
+
+.or-divider::before, .or-divider::after {
+    flex-grow: 1;
+    height: 1px;
+    line-height: var(--space-none);
+    margin: var(--space-none);
+    content: "";
+    background-color: var(--gray-5);
+    font-size: 0px;
+}
+
+.or-divider::before {
+    margin-left: var(--space-none);
+    margin-right: calc(var(--space-xxs) / 2);
+}
+
+.or-divider::after {
+    margin-left: calc(var(--space-xxs) / 2);
+    margin-right: var(--space-none);
+}

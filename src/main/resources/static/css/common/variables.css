@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+:root {
+    /* ----------------------------------------
+        # 색상
+    ---------------------------------------- */
+    /* 메인 색상 */
+    --color-primary: #434CE6;
+    --color-secondary: #D1D3FA;
+    --color-accent: #2B78EB;
+    --color-light: #F8F8F9;
+    --color-dark: #484757;
+
+    /* 회색조 */
+    --white: #FFFFFF;
+    --gray-1: #F8F9FA;
+    --gray-2: #E9ECEF;
+    --gray-3: #DEE2E6;
+    --gray-4: #CED4DA;
+    --gray-5: #ADB5BD;
+    --gray-6: #6C6B7E;
+    --gray-7: #495057;
+    --gray-8: #343A40;
+    --gray-9: #212529;
+    --black: #1E2224;
+
+    /* 피드백 */
+    --color-success: #55B980;
+    --color-danger: #EE585B;
+    --color-warning: #FBCA77;
+
+    /* 타이포그래피 */
+    --color-text: var(--gray-8);
+    --color-text-heading: var(--color-dark);
+    --color-text-subtitle: var(--gray-6);
+    --color-link: var(--color-accent);
+    --color-helper: var(--gray-6);
+
+    /* 테두리 */
+    --color-border: var(--gray-3);
+
+    /* 컴포넌트 */
+    --component-border: var(--color-border);
+    --component-background: var(--white);
+
+    /* 폼 */
+    --form-element-border: var(--color-border);
+    --form-element-border-focus: var(--color-primary);
+    --form-element-border-success: var(--color-success);
+    --form-element-border-error: var(--color-danger);
+    --form-element-background: var(--white);
+
+    /* 버튼 */
+    --color-btn-kakao: #FBE300;
+    --color-btn-kakao-text: #3B1E1E;
+    --color-btn-google-text: #5A5A5A;
+
+    /* 아이콘 */
+    --color-icon: var(--gray-6);
+    --icon-primary: var(--color-primary);
+    --icon-primary-inverted: var(--color-secondary);
+
+
+    /* ----------------------------------------
+        # 간격
+    ---------------------------------------- */
+    --space-unit: 16px;
+
+    --space-none: calc(0 * var(--space-unit));      /* 0px */
+    --space-xxs: calc(0.25 * var(--space-unit));    /* 4px */
+    --space-xs: calc(0.5 * var(--space-unit));      /* 8px */
+    --space-sm: calc(0.75 * var(--space-unit));     /* 12px */
+    --space-md: calc(1.25 * var(--space-unit));     /* 20px */
+    --space-lg: calc(1.5 * var(--space-unit));      /* 24px */
+    --space-xl: calc(1.75 * var(--space-unit));     /* 28px */
+    --space-xxl: calc(2 * var(--space-unit));       /* 32px */
+
+
+    /* ----------------------------------------
+        # 타이포그래피
+    ---------------------------------------- */
+    /* 글꼴 */
+    --font-branding: 'Lobster-Regular', sans-serif;
+    --font-primary: 'Pretendard-Regular', sans-serif;
+    --font-secondary: 'Pretendard-Medium', sans-serif;
+    --font-heading-primary: 'Pretendard-ExtraBold', sans-serif;
+    --font-heading-secondary: 'Montserrat-ExtraBold', sans-serif;
+
+    /* 폰트 굵기 */
+    --font-weight-base: 600;
+    --font-weight-bold: 800;
+
+    /* 기본 사이즈 */
+    --text-base-size: 13px;
+    
+    /* 텍스트 크기별 정의 */
+    --text-xs: calc(var(--text-base-size) - 2px);   /* 11px */
+    --text-sm: calc(var(--text-xs) + 1px);          /* 12px */
+    --text-md: calc(var(--text-sm) + 4px);          /* 16px */
+    --text-lg: calc(var(--text-md) + 6px);          /* 22px */
+    --text-xl: calc(var(--text-lg) + 8px);          /* 30px */
+
+    /* 텍스트 줄 간격 */
+    --body-line-height: 1.4;
+    --heading-line-height: 1.2;
+    --form-line-height: 1;
+
+    /* ----------------------------------------
+        # 아이콘
+    ---------------------------------------- */
+    /* 기본 */
+    --icon-base-size: 14px;
+
+    /* 아이콘 크기별 정의 */
+    --icon-sm: 12px;
+    --icon-md: 16px;
+    --icon-lg: 20px;
+    --icon-xl: 24px;
+
+
+    /* ----------------------------------------
+        # 이미지
+    ---------------------------------------- */
+    /* 기본 */
+    --img-unit: 20px;
+    --img-scale: 2;
+
+    /* 이미지 크기별 정의 */
+    --img-xs: calc(var(--img-scale) * var(--img-unit)); /* 40px */
+    --img-sm: calc(var(--img-scale) * var(--img-xs));   /* 80px */
+    --img-md: calc(var(--img-scale) * var(--img-sm));   /* 160px */
+    --img-lg: calc(var(--img-scale) * var(--img-md));   /* 320px */
+    --img-xl: calc(var(--img-scale) * var(--img-lg));   /* 640px */
+
+
+    /* ----------------------------------------
+        # 테두리
+    ---------------------------------------- */
+    /* 테두리 굵기 */
+    --border-width-normal: 1px;
+    --border-width-bold: 2px;
+    --border-width-heavy: 3px;
+
+    /* 모서리 */
+    --rounded-field: 3px;
+    --rounded-component: 6px;
+    --rounded-full: 9999px;
+    --rounded-circle: 50%;
+
+
+    /* ----------------------------------------
+        # 불투명도
+    ---------------------------------------- */
+    --opacity-weak: 0.3;
+    --opacity-strong: 0.7;
+
+
+    /* ----------------------------------------
+        # 그림자
+    ---------------------------------------- */
+    --box-shadow-base: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+    --box-shadow-sm: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    --box-shadow-md: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    --box-shadow-lg: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+
+    /* ----------------------------------------
+        # 컴포넌트
+    ---------------------------------------- */
+    /* 크기 */
+    --component-field-height: 42px;
+}

@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+/* ######################################################################
+    # 텍스트
+###################################################################### */
+/* 공통 */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+    line-height: var(--body-line-height);
+    font-family: var(--font-primary);
+    font-size: var(--text-base-size);
+    font-weight: var(--font-weight-base);
+    color: var(--color-text);
+}
+
+/* 텍스트 정렬 */
+.has-text-left {
+    text-align: left;
+}
+
+.has-text-right {
+    text-align: right;
+}
+
+.has-text-center {
+    text-align: center;
+}
+
+/* 텍스트 색상 */
+.is-text-primary {
+    color: var(--color-primary);
+}
+
+.is-text-accent, .is-link-accent {
+    color: var(--color-link);
+}
+
+.is-text-helper {
+    color: var(--color-helper);
+}
+
+/* 텍스트 로고 */
+.site-title {
+    letter-spacing: 0.05em;
+    font-family: var(--font-branding);
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--gray-7);
+}
+
+
+
+/* ######################################################################
+    # 이미지
+###################################################################### */
+.has-img {
+    position: relative;
+    width: fit-content;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+}
+
+.has-img.is-x-small {
+    max-width: var(--img-xs);
+}
+
+.has-img.is-small {
+    max-width: var(--img-sm);
+}
+
+.has-img.is-medium {
+    max-width: var(--img-md);
+}
+
+.has-img.is-large {
+    max-width: var(--img-lg);
+}
+
+.has-img.is-x-large {
+    max-width: var(--img-xl);
+}

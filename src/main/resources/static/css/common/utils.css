@@ -1,0 +1,377 @@
+@charset "UTF-8";
+
+/* ######################################################################
+    # 디스플레이
+###################################################################### */
+.is-none {
+    display: none;
+}
+
+.is-block {
+    display: block;
+}
+
+.is-inline-block {
+    display: inline-block;
+}
+
+.is-flex {
+    display: flex;
+}
+
+.is-inline-flex {
+    display: inline-flex;
+}
+
+
+/* ######################################################################
+    # 플렉스
+###################################################################### */
+/* 수직 정렬 */
+.flex-v {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-v.is-start {
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.flex-v.is-end {
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.flex-v.is-center {
+    align-items: center;
+}
+
+/* 수평 정렬 */
+.flex-h {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-h.is-start {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flex-h.is-end {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.flex-h.is-center {
+    justify-content: center;
+}
+
+.flex-h.is-space-around {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-h.is-space-between {
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 정중앙 정렬 */
+.flex-v.is-center-all, .flex-h.is-center-all {
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ######################################################################
+    # 간격
+###################################################################### */
+/* 갭 (수직 + 수평) */
+.ga-0 {
+    gap: var(--space-none);
+}
+
+.ga-1 {
+    gap: var(--space-xxs);
+}
+
+.ga-2 {
+    gap: var(--space-unit);
+}
+
+.ga-3 {
+    gap: var(--space-md);
+}
+
+.ga-4 {
+    gap: var(--space-lg);
+}
+
+.ga-5 {
+    gap: var(--space-xxl);
+}
+
+/* 갭 - 수직 */
+.gv-1 {
+    gap: var(--space-xxs) var(--space-none);
+}
+
+.gv-2 {
+    gap: var(--space-unit) var(--space-none);
+}
+
+.gv-3 {
+    gap: var(--space-md) var(--space-none);
+}
+
+.gv-4 {
+    gap: var(--space-lg) var(--space-none);
+}
+
+.gv-5 {
+    gap: var(--space-xxl) var(--space-none);
+}
+
+/* 갭 - 수평 */
+.gh-1 {
+    gap: var(--space-none) var(--space-xxs);
+}
+
+.gh-2 {
+    gap: var(--space-none) var(--space-unit);
+}
+
+.gh-3 {
+    gap: var(--space-none) var(--space-md);
+}
+
+.gh-4 {
+    gap: var(--space-none) var(--space-lg);
+}
+
+.gh-5 {
+    gap: var(--space-none) var(--space-xxl);
+}
+
+/* 마진 - 상 */
+.mt-0 {
+    margin-top: var(--space-none);
+}
+
+.mt-1 {
+    margin-top: var(--space-xxs);
+}
+
+.mt-2 {
+    margin-top: var(--space-unit);
+}
+
+.mt-3 {
+    margin-top: var(--space-md);
+}
+
+.mt-4 {
+    margin-top: var(--space-lg);
+}
+
+.mt-5 {
+    margin-top: var(--space-xxl);
+}
+
+/* 마진 - 하 */
+.mb-0 {
+    margin-bottom: var(--space-none);
+}
+
+.mb-1 {
+    margin-bottom: var(--space-xxs);
+}
+
+.mb-2 {
+    margin-bottom: var(--space-unit);
+}
+
+.mb-3 {
+    margin-bottom: var(--space-md);
+}
+
+.mb-4 {
+    margin-bottom: var(--space-lg);
+}
+
+.mb-5 {
+    margin-bottom: var(--space-xxl);
+}
+
+/* 마진 - 가운데 */
+.m-auto {
+    margin: var(--space-none) auto;
+}
+
+/* 패딩 - 전체 */
+.pa-0 {
+    padding: var(--space-none);
+}
+
+.pa-1 {
+    padding: var(--space-xxs);
+}
+
+.pa-2 {
+    padding: var(--space-unit);
+}
+
+.pa-3 {
+    padding: var(--space-md);
+}
+
+.pa-4 {
+    padding: var(--space-lg);
+}
+
+.pa-5 {
+    padding: var(--space-xxl);
+}
+
+/* 패딩 - 수평 */
+.ph-1 {
+    padding: var(--space-none) var(--space-xxs);
+}
+
+.ph-2 {
+    padding: var(--space-none) var(--space-unit);
+}
+
+.ph-3 {
+    padding: var(--space-none) var(--space-md);
+}
+
+.ph-4 {
+    padding: var(--space-none) var(--space-lg);
+}
+
+.ph-5 {
+    padding: var(--space-none) var(--space-xxl);
+}
+
+/* 패딩 - 좌 */
+.pl-0 {
+    padding-left: var(--space-none);
+}
+
+.pl-1 {
+    padding-left: var(--space-xxs);
+}
+
+.pl-2 {
+    padding-left: var(--space-unit);
+}
+
+.pl-3 {
+    padding-left: var(--space-md);
+}
+
+.pl-4 {
+    padding-left: var(--space-lg);
+}
+
+.pl-5 {
+    padding-left: var(--space-xxl);
+}
+
+/* 패딩 - 우 */
+.pr-0 {
+    padding-right: var(--space-none);
+}
+
+.pr-1 {
+    padding-right: var(--space-xxs);
+}
+
+.pr-2 {
+    padding-right: var(--space-unit);
+}
+
+.pr-3 {
+    padding-right: var(--space-md);
+}
+
+.pr-4 {
+    padding-right: var(--space-lg);
+}
+
+.pr-5 {
+    padding-right: var(--space-xxl);
+}
+
+/* 패딩 - 수직 */
+.pv-1 {
+    padding: var(--space-xxs) var(--space-none);
+}
+
+.pv-2 {
+    padding: var(--space-unit) var(--space-none);
+}
+
+.pv-3 {
+    padding: var(--space-md) var(--space-none);
+}
+
+.pv-4 {
+    padding: var(--space-lg) var(--space-none);
+}
+
+.pv-5 {
+    padding: var(--space-xxl) var(--space-none);
+}
+
+/* 패딩 - 상 */
+.pt-0 {
+    padding-top: var(--space-none);
+}
+
+.pt-1 {
+    padding-top: var(--space-xxs);
+}
+
+.pt-2 {
+    padding-top: var(--space-unit);
+}
+
+.pt-3 {
+    padding-top: var(--space-md);
+}
+
+.pt-4 {
+    padding-top: var(--space-lg);
+}
+
+.pt-5 {
+    padding-top: var(--space-xxl);
+}
+
+/* 패딩 - 하 */
+.pb-0 {
+    padding-bottom: var(--space-none);
+}
+
+.pb-1 {
+    padding-bottom: var(--space-xxs);
+}
+
+.pb-2 {
+    padding-bottom: var(--space-unit);
+}
+
+.pb-3 {
+    padding-bottom: var(--space-md);
+}
+
+.pb-4 {
+    padding-bottom: var(--space-lg);
+}
+
+.pb-5 {
+    padding-bottom: var(--space-xxl);
+}
