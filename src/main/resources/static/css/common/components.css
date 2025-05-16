@@ -79,6 +79,7 @@
     border-radius: var(--rounded-field);
     background-color: var(--component-background);
     font-family: var(--font-primary);
+    font-size: var(--text-base-size);
     font-weight: var(--font-weight-base);
     color: inherit;
 }
@@ -140,6 +141,7 @@
     border-radius: var(--rounded-field);
     background-color: var(--form-element-background);
     font-family: var(--font-primary);
+    font-size: var(--text-base-size);
     font-weight: var(--font-weight-base);
     color: var(--color-text);
 }

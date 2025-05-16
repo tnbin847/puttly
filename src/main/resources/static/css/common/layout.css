@@ -21,6 +21,11 @@ html, body {
 #container {
     display: flex;
     flex: 1;
+    padding-bottom: var(--space-xxl);
+}
+
+.contents {
+    padding: var(--space-unit);
 }
 
 /* 공통 푸터 영역 */

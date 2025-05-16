@@ -67,8 +67,8 @@ spring:
     init:
       # DB 초기화 모드 설정 : 내장 데이터베이스 사용 시 스크립트 실행
       mode: EMBEDDED
-#      schema-locations:
-#        - classpath:db/schema.sql
+      schema-locations:
+        - classpath:db/schema.sql
   h2:
     console:
       path: /h2-console
