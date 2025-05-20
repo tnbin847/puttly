@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 런타임시 마이바티스 동작 방식 제어를 위한 설정 -->
+    <settings>
+        <!-- 지연 로딩 설정 활성화 -->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <!-- 세컨드 레벨의 캐시(매퍼의 네임스페이스 단위로 동작) 비활성화 -->
+        <setting name="cacheEnabled" value="false"/>
+        <!-- 로컬 캐시 적용 범위 설정 -->
+        <setting name="localCacheScope" value="STATEMENT"/>
+        <!-- 언더스코어 표기법의 컬럼명을 카멜케이스 표기법의 필드명으로 매핑 활성화 -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!-- 컬럼의 값이 NULL일 경우, 값의 누락 방지를 위해 setter() 또는 put() 호출 -->
+        <setting name="callSettersOnNulls" value="true"/>
+        <!-- NULL 파라미터에 대한 JDBC 타입 지정 -->
+        <setting name="jdbcTypeForNull" value="NULL"/>
+    </settings>
+</configuration>

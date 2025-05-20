@@ -1,0 +1,21 @@
+##################################################
+# 로컬 데이터베이스 - 마리아 DB 설정
+##################################################
+spring:
+  config:
+    activate:
+      on-profile: local
+  # 로컬 데이터베이스(마리아 DB) 연결 정보 설정
+  datasource:
+    url: jdbc:mariadb://localhost:3306/puttly?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    username: suihin
+    password: tq7593
+    driver-class-name: org.mariadb.jdbc.Driver
+
+logging:
+  level:
+    root: info
+    web: info
+
+server:
+  port: 81

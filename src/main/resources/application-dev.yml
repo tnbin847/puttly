@@ -1,0 +1,35 @@
+##################################################
+# H2 인 메모리 데이터베이스 설정
+##################################################
+spring:
+  config:
+    activate:
+      on-profile: dev
+  # H2 인메모리 데이터베이스 연결 정보 설정
+  datasource:
+    url: jdbc:h2:mem:puttly_dev;MODE=MySQL;DB_CLOSE_DELAY=-1
+    username: sa
+    driver-class-name: org.h2.Driver
+  # 스키마 버전 관리 비활성화
+  flyway:
+    enabled: false
+  # 데이터베이스 초기화 모드
+  sql:
+    init:
+      # 내장 데이터베스이 사용시 SQL 스크립트 파일 실행
+      mode: EMBEDDED
+      # 실행될 스키마 파일의 경로 지정
+      schema-locations:
+        - 'classpath:db/schema.sql'
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
+
+logging:
+  level:
+    root: info
+    web: debug
+
+server:
+  port: 80

@@ -1,0 +1,47 @@
+##################################################
+# 공통 환경 설정
+##################################################
+spring:
+  config:
+    activate:
+      # 활성화할 프로파일 명칭
+      on-profile: common
+  application:
+    # 애플리케이션 이름 설정
+    name: puttly-v1.1
+  main:
+    # 스프링부트 애플리케이션 런타임시 출력되는 콘솔 배너 끄기
+    banner-mode: OFF
+  # 웹 브라우저의 새로고침 후 화면의 변경 이력의 반영을 위한 템플릿 파일 경로와 캐시값 지정
+  thymeleaf:
+    prefix: file:src/main/resources/templates/
+    suffix: .html
+    # 모든 개발 완료 후 활성화(true) 변경
+    cache: false
+  web:
+    # 웹 브라우저의 새로고침 후 화면의 변경 이력의 반영을 위한 정적 리소스 파일 경로와 캐시값 지정
+    resources:
+      static-locations: file:src/main/resources/static/
+      cache:
+        # 캐싱 기간을 36000분(10시간) 지정
+        period: 36000
+
+mybatis:
+  # 마이바티스 설정 파일의 경로 지정
+  config-location: classpath:mybatis/mybatis-config.xml
+  # DTO 클래스의 별칭을 자동으로 
+  type-aliases-package: com.tnbin.puttly.domain.**.dto
+  # 사용자 정의 타입 핸들러 클래스의 패키지 지정
+  type-handlers-package: com.tnbin.puttly.global.common.mybatis
+  # 매퍼 파일(*.xml)의 경로 지정
+  mapper-locations: classpath:mybatis/mapper/*_mapper.xml
+
+server:
+  servlet:
+    # HTTP 요청 및 응답의 인코딩 설정
+    encoding:
+      charset: 'UTF-8'
+      # 인코딩 필더 활성화
+      enabled: true
+      # 인코딩 설정 강제 적용
+      force: true
