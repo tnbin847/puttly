@@ -1,0 +1,20 @@
+server:
+  port: 80
+  servlet:
+    encoding:
+      charset: 'UTF-8'
+      force: true
+
+
+spring:
+  main:
+    banner-mode: OFF
+  thymeleaf:
+    prefix: file:src/main/resources/templates/
+    suffix: .html
+    cache: false
+  web:
+    resources:
+      static-locations: file:src/main/resources/static/
+      cache:
+        period: 36000
